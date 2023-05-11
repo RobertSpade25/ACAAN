@@ -1,0 +1,46 @@
+{% extends  "layout.html" %}
+{% block title %} Playing Card {% endblock %}
+
+{% block main %}
+<form method = "post">
+<table>
+{% for card in deck %}
+  {% if deck.index(card) % 2 == 0 %}
+    {% if deck.index(card) % 4 == 0 %}
+      <tr>
+        <td><input class="btn btn-dark btn-lg" type="submit" name="submit_button"
+            value="{{ card }}">
+        </td>
+        {% elif deck.index(card) % 4 == 3 %}
+        <td><input class="btn btn-dark btn-lg" type="submit" name="submit_button"
+            value="{{ card }}">
+        </td>
+      </tr>
+      {% else %}
+      <td><input class="btn btn-dark btn-lg" type="submit" name="submit_button" value="{{ card }}">
+      </td>
+      {% endif %}
+  {% else %} 
+    {% if deck.index(card) % 4 == 0 %}
+    <tr>
+      <td><input class="btn btn-danger btn-lg" type="submit" name="submit_button"
+          value="{{ card }}">
+      </td>
+      {% elif deck.index(card) % 4 == 3 %}
+      <td><input class="btn btn-danger btn-lg" type="submit" name="submit_button"
+          value="{{ card }}">
+      </td>
+    </tr>
+    {% else %}
+    <td><input class="btn btn-danger btn-lg" type="submit" name="submit_button" value="{{ card }}">
+    </td>
+    {% endif %}
+  {% endif %}
+
+
+{% endfor %}
+
+
+</table>
+</form>
+{% endblock %}

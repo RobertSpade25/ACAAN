@@ -1,0 +1,19 @@
+{% extends  "layout.html" %}
+{% block title %} First Digit {% endblock %}
+
+{% block main %}
+<div class="vh-100">
+  <form method="post">
+  <div class="d-flex flex-column vh-100">
+  {% for number in range (10) %} 
+  {% if number < 6 %}  
+    <input style="height: 9%; font-size: 30px;" class="btn btn-success mt-1" type="submit" name = "submit_button1"
+              value="{{ number }}">
+  {% else %} 
+    <div style="height: 9%" class="mt-1"></div>
+  {% endif %}
+  {% endfor %}
+  </div>
+  </form>
+  </div>
+{% endblock %}

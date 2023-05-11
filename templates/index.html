@@ -1,0 +1,16 @@
+{% extends  "layout.html" %}
+{% block title %} Timer {% endblock %}
+
+{% block main %}
+<div class="d-flex flex-column vh-100">
+<div class="h-25"></div>
+<div class="h-25 mt-1">
+    <form method = "post">
+    <input type="number" name="timer_input">
+    <input type="submit">
+    </form>
+</div>
+<div class="h-25"></div>
+<div class="h-25"></div>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends  "layout.html" %}
+{% block title %} Second Digit {% endblock %}
+
+{% block main %}
+<div class="vh-100 d-flex align-items-center">
+{% if color == "red" %}
+<h1 style="font-size: 100px; color: red;">{{ shift_card }}</h1>
+{% else %}  
+<h1 style="font-size: 100px; color: black;">{{ shift_card }}</h1>
+{% endif %}
+{% endblock %}

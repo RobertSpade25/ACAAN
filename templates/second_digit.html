@@ -1,0 +1,15 @@
+{% extends  "layout.html" %}
+{% block title %} Second Digit {% endblock %}
+
+{% block main %}
+<div class="vh-100">
+<form method="post">
+<div class="d-flex flex-column vh-100">
+{% for number in range (10) %}  
+  <input style="height: 9%; font-size: 30px;" class="btn btn-primary mt-1" type="submit" name = "submit_button2"
+            value="{{ number }}">
+{% endfor %}
+</div>
+</form>
+</div>
+{% endblock %}
